@@ -1,0 +1,51 @@
+{
+    "title" : "Cuarenta versos acerca de la Realidad",
+    "consciousness" : {
+        "definition": "Act of being conscious",
+        "tamil" : "uḷḷadu",
+        "synonyms" : [
+            "awareness",
+            "knowing"
+        ],
+        "urls" : [
+            {
+                "url" : "theblog.com/x",
+                "title" : "How does consciousness work"
+            }
+        ],
+        "videos" : [
+            {
+                "url" : "https://www.youtube.com/embed/HkmyBEtWklc?start=293",
+                "title" : "How does consciousness work"
+            },
+            {
+                "html" : "https://www.youtube.com/embed/AgC39gCfptI?start=293",
+                "title" : "Hello World"
+            }
+        ]
+    },
+    "synonym" : {
+        "translation" : "sinónimo"
+    },
+    "introduction" : {
+        "translation" : "verso introductorio"
+    },
+    "verse" : {
+        "translation" : "verso"
+    },
+    "show tamil" : {
+        "translation" : "Mostrar tamil"
+    },
+    "hide tamil" : {
+        "translation" : "Ocultar tamil"
+    }, 
+    "padacchedam word separation" : {
+        "translation" : "Padacchēdam (Separación por palabras)"
+    },
+    "anvayam" : {
+        "translation" : "Anvayam"
+    },
+    "paraphrase" : {
+        "translation" : "Texto explicativo"
+    }
+}
