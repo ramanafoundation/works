@@ -38,7 +38,7 @@
     "paraphrase" : {
         "translation" : "Texto explicativo"
     },
-    "hide definitions" : {
-        "translation" : "Ocultar definiciones"
+    "show definitions" : {
+        "translation" : "Mostrar definiciones"
     }
 }
