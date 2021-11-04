@@ -1,4 +1,10 @@
-.has-explanation{
+.paragraph-definitions-enabled .has-explanation{
+    text-decoration: none;
+    cursor:pointer;
+    color:skyblue
+}
+
+.has-explanation:hover{
     text-decoration: none;
     cursor:pointer;
     color:skyblue
