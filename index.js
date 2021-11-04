@@ -23,6 +23,16 @@ $(function(){
         _displayParagraph();
     });
 
+    function _toggleHideDefinitions() {
+        var explanationsAvailable = $(".has-explanation").length > 0;
+
+        if (!explanationsAvailable) {
+            $(".form-check").hide();
+        } else {
+            $(".form-check").show();
+        }
+    }
+
     function _showCarousel() {
         $(".carousel").carousel();
     }
@@ -74,6 +84,8 @@ $(function(){
                     text : translatedParagraph.text,
                     dictionary : translatedParagraph.dictionary
                 });
+
+                _toggleHideDefinitions();
             });
 
         $(".explanation").hide();
