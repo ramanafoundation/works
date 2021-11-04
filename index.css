@@ -32,7 +32,7 @@ select {
 }
 
 body{
-    background: url(/images/arunachala.png) no-repeat center center fixed;
+    background: url(images/arunachala.png) no-repeat center center fixed;
     background-size: cover;
 }
 
