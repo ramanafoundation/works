@@ -44,5 +44,8 @@
     },
     "anvayam" : {
         "translation" : "Anvayam"
+    },
+    "hide definitions" : {
+        "translation" : "Hide definitions"
     }
 }

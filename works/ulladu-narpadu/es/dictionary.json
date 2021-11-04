@@ -47,5 +47,8 @@
     },
     "paraphrase" : {
         "translation" : "Texto explicativo"
+    },
+    "hide definitions" : {
+        "translation" : "Ocultar definiciones"
     }
 }
