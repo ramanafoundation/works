@@ -64,3 +64,7 @@ body{
     border:1px;
     background: #d6bd9026
 }
+
+.main {
+    min-height: 720px
+}
