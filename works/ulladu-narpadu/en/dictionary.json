@@ -8,20 +8,8 @@
             "knowing"
         ],
         "urls" : [
-            {
-                "url" : "theblog.com/x",
-                "title" : "How does consciousness work"
-            }
         ],
         "videos" : [
-            {
-                "url" : "https://www.youtube.com/embed/HkmyBEtWklc?start=293",
-                "title" : "How does consciousness work"
-            },
-            {
-                "html" : "https://www.youtube.com/embed/AgC39gCfptI?start=293",
-                "title" : "Hello World"
-            }
         ]
     },
     "synonym" : {

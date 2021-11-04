@@ -6,17 +6,14 @@
         "awareness" : {
             "definition": "Condition of being aware",
             "tamil" : "uḷḷadu",
-            "sanskrit" : "sat",
+            "sanskrit" : "chit",
             "synonyms" : [
                 "consciousness ",
                 "center",
                 "heart"
             ],
             "urls" : [
-                {
-                    "url" : "theblog.com/x",
-                    "title" : "What is the heart?"
-                }
+                
             ],
             "videos" : [
             ]
