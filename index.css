@@ -1,0 +1,60 @@
+.has-explanation{
+    text-decoration: none;
+    cursor:pointer;
+    color:skyblue
+}
+
+.has-explanation:hover{
+    text-decoration: underline;
+}
+
+.explainer-title {
+    font-weight: bold;
+}
+
+.explainer-content ul {
+    list-style-type: none;
+    padding-left:0px;
+    margin-bottom:0px;
+}
+
+.explanation-entry {
+    margin-bottom:15px;
+}
+
+.explanation {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 5px
+}
+
+body{
+    background: url(/images/arunachala.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.card {
+    opacity:0.9
+}
+
+.carousel img {
+    max-width : 100%;
+    margin-bottom:10px;
+}
+
+.work-title {
+    color : white
+}
+
+.work-translated-title {
+    color : white
+}
+
+.paraphrase-section {
+    color : #cfaf88;
+    border:1px;
+    background: #d6bd9026
+}

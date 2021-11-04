@@ -1,0 +1,22 @@
+{
+    "text" : 
+    "Aquellos nobles de corazón al conocer el miedo intenso a la muerte buscan refugio solo a los pies del Señor que no tiene ni muerte ni nacimiento. Muertos para ellos mismos y sus posesiones, ¿se les puede ocurrir de nuevo el pensamiento de la muerte? Sin muerte pues permanecen.",
+    "title" : "Verso Introductorio 2",
+    "dictionary" : {
+        "nobles" : {
+            "definition": "Aquellos que son puros de corazón.",
+            "synonyms" : [
+                "buenas personas",
+                "nobles de alma"
+            ],
+            "urls" : [
+                {
+                    "url" : "theblog.com/x",
+                    "title" : "What is the heart?"
+                }
+            ],
+            "videos" : [
+            ]
+        }
+    }
+}

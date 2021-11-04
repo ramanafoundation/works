@@ -1,0 +1,18 @@
+{
+    "works" : [
+        {
+            "folder" : "ulladu-narpadu",
+            "name" : "Ulladu Narpadu"
+        }
+    ],
+    "locales" : [
+        {
+            "name" : "Spanish",
+            "locale" : "es"
+        },
+        {
+            "name" : "English",
+            "locale" : "en"
+        }
+    ]
+}

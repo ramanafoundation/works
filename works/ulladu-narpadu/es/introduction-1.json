@@ -1,0 +1,34 @@
+{
+    "title" : "Verso Introductorio 1",
+    "text" : 
+    "Si lo que es no existiera, ¿habría consciencia de existir? Dado que la substancia de la existencia existe sin pensamiento en el corazón, ¿cómo pensar en la substancia de la existencia, que es llamada “corazón”? Solo permanecer en el corazón como lo que es es pensar. Sábelo.",
+    "paraphrase" : 
+    "Si uḷḷadu [lo que es o lo que existe] no fuera, ¿existiría uḷḷa-v-uṇarvu [conciencia existente, conciencia real o conciencia de lo que es]?, Puesto que uḷḷa-poruḷ [la sustancia o realidad existente] existe en el corazón sin pensamiento, ¿cómo [o quién puede] pensar en [meditar o investigar] uḷḷa-poruḷ, la cual es llamada 'uḷḷam' [el corazón]? Ser en el corazón tal como Ello es [es decir, como pura autoconciencia libre de pensamientos] solo es pensar [en El, meditar en El, contemplarle, investigarlo o reverenciarlo]. Conoce [o se consciente] [de Ello tal y como es].",
+    "dictionary" : {
+        "existir" : {
+            "definition": "Ser",
+            "synonyms" : [
+                "existir"
+            ]
+        },
+        "substancia" : {
+            "definition" : "Aquello de lo cual aquello que existe está compuesto.",
+            "tamil" : "uḷḷa-poruḷ",
+            "synonyms" : [
+                "material"
+            ]
+        },
+        "pensamiento" : {
+            "definition" : "Acto de estar consciente de cosas distintas a nosostros."
+        }, 
+        "corazón" : {
+            "definition" : "El centro, la realidad, aquello existe"
+        },
+        "pensar" : {
+            "definition" : "Meditar"
+        },
+        "sábelo" : {
+            "definition" : "Conoce esto, investiga, constata."
+        }
+    }
+}

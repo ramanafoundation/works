@@ -1,0 +1,42 @@
+{
+    "paragraphs" : [
+        {
+            "type" : "introduction",
+            "number" : 1,
+            "text" : {
+                "padacchēdam" : "uḷḷadu aladu uḷḷa-v-uṇarvu uḷḷadō? uḷḷa-poruḷ uḷḷal-aṟa uḷḷattē uḷḷadāl, uḷḷam eṉum uḷḷa-poruḷ uḷḷal evaṉ? uḷḷattē uḷḷapaḍi uḷḷadē uḷḷal. uṇar.",
+                "anvayam" : "uḷḷadu aladu uḷḷa-v-uṇarvu uḷḷadō? uḷḷa-poruḷ uḷḷal-aṟa uḷḷattē uḷḷadāl, uḷḷam eṉum uḷḷa-poruḷ evaṉ uḷḷal? uḷḷattē uḷḷapaḍi uḷḷadē uḷḷal; uṇar"
+            } 
+        },
+        {
+            "type" : "introduction",
+            "number" : 2,
+            "text" : {
+                "padacchēdam" : "maraṇa-bhayam mikku uḷa am makkaḷ araṇ-āha maraṇa-bhavam-illā mahēśaṉ caraṇamē sārvar. tam sārvu oḍu tām sāvu uṯṟār. sāvu eṇṇam sārvarō sāvādavar?",
+                "anvayam" : "maraṇa-bhayam mikku uḷa am makkaḷ araṇ-āha maraṇa-bhavam-illā mahēśaṉ caraṇamē sārvar. tam sārvu oḍu tām sāvu uṯṟār. sāvādavar sāvu eṇṇam sārvarō?"
+            } 
+        },
+        {
+            "type" : "verse",
+            "number" : 1,
+            "text" : {
+                "padacchēdam" : "nām ulaham kāṇḍalāl, nāṉā ām śatti uḷa ōr mudalai oppal orutalaiyē. nāma uru cittiramum, pārppāṉum, sērpaḍamum, ār oḷiyum — attaṉaiyum tāṉ ām avaṉ."
+            } 
+        },
+        {
+            "type" : "verse",
+            "number" : 2,
+            "text" : {
+                "padacchēdam" : "mum mudalai e-m-matamum muṉ koḷḷum. ‘ōr mudalē mum mudalāy niṟkum’, ‘eṉḏṟum mum mudalum mum mudalē’ eṉṉal ahaṅkāram irukkum maṭṭē. yāṉ keṭṭu, taṉ nilaiyil niṯṟal talai.",
+                "anvayam" : "e-m-matamum mum mudalai muṉ koḷḷum. ‘ōr mudalē mum mudalāy niṟkum’, ‘eṉḏṟum mum mudalum mum mudalē’ eṉṉal ahaṅkāram irukkum maṭṭē. yāṉ keṭṭu, taṉ nilaiyil niṯṟal talai."
+            } 
+        },
+        {
+            "type" : "verse",
+            "number" : 3,
+            "text" : {
+                "padacchēdam" : "‘ulahu mey’, ‘poy tōṯṟam’, ‘ulahu aṟivu ām’, ‘aṉḏṟu’ eṉḏṟu, ‘ulahu sukham’, ‘aṉḏṟu’ eṉḏṟu uraittu eṉ? ulahu viṭṭu, taṉṉai ōrndu, oṉḏṟu iraṇḍu tāṉ aṯṟu, ‘nāṉ’ aṯṟa a-n-nilai ellārkkum oppu ām."
+            }
+        }
+    ]
+}
