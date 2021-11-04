@@ -9,6 +9,7 @@ $(function(){
 
             if (checked) { 
                 container.removeClass("paragraph-definitions-enabled");
+                $(".explanation").hide();
             } else {
                 container.addClass("paragraph-definitions-enabled");
             }
