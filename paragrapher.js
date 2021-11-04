@@ -1,23 +1,24 @@
 $(function(){
     jQuery.fn.paragrapher = function(options){
         var that = $(this),
-            titleTranslation = window.dictionaryService.translate("hide definitions");
+            titleTranslation = window.dictionaryService.translate("show definitions");
 
         _setUpHideDefinitions();
 
         function _setUpHideDefinitions() {
-            $(".form-check").change((ev) => {
+            $(".form-check input[type=checkbox]").unbind();
+            $(".form-check input[type=checkbox]").change((ev) => {
                 var checked = $(ev.currentTarget).prop("checked"),
                     container = $(".paragraph-container");
     
-                if (checked) { 
+                if (!checked) { 
                     container.removeClass("paragraph-definitions-enabled");
                     $(".explanation").hide();
                 } else {
                     container.addClass("paragraph-definitions-enabled");
                 }
             });
-            $("#hideDefinitionsLabel").text(titleTranslation);
+            $(".form-check label").text(titleTranslation);
         }
 
         that.each(function(){
