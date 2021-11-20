@@ -2,27 +2,6 @@ $(function(){
     var toolbar = $(".main-toolbar"),
         main = $("main");
 
-    $("body").on("languageChanged", (ev, data) => {
-        window.currentLocale = data;
-        _displayWork();
-    });
-
-    toolbar.toolbar();
-    toolbar.on("workSelected", (ev, data) => {
-        window.currentWork = data;
-        window.workService
-            .getWorkByFolder(window.currentWork.folder)
-            .then((tamilData) => {
-                window.currentWork.tamil = tamilData;
-                _displayWork();
-            });
-    });
-
-    main.on("paragraphSelected", (ev, data) => {
-        window.currentWork.selectedParagraph = data;
-        _displayParagraph();
-    });
-
     function _toggleHideDefinitions() {
         var explanationsAvailable = $(".has-explanation").length > 0;
 
@@ -130,7 +109,6 @@ $(function(){
         
         button.click(() => {
             section.toggleClass("tamil-section-visible");
-
             _toggleVisibility();
         });
 
@@ -145,4 +123,33 @@ $(function(){
             }
         }
     }
+
+    function _bindEvents(){
+        main.on("paragraphSelected", (ev, data) => {
+            window.currentWork.selectedParagraph = data;
+            _displayParagraph();
+        });
+
+        toolbar.on("workSelected", (ev, data) => {
+            window.currentWork = data;
+            window.workService
+                .getWorkByFolder(window.currentWork.folder)
+                .then((tamilData) => {
+                    window.currentWork.tamil = tamilData;
+                    _displayWork();
+                });
+        });
+
+        $("body").on("languageChanged", (ev, data) => {
+            window.currentLocale = data;
+            _displayWork();
+        });    
+    }
+
+    function _initialize(){
+        toolbar.toolbar();
+    }
+
+    _bindEvents();
+    _initialize();
 });
