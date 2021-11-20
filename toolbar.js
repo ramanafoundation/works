@@ -27,7 +27,17 @@ $(function(){
             function _renderLanguages(array) {
                 var languageSelect = $(".language-selection"),
                     selectedLanguageIndex = -1,
-                    browserLanguage = navigator.language.split("-")[0];
+                    browserLanguage = navigator.language.split("-")[0],
+                    hasLanguage = array.filter( 
+                            function(item){ 
+                                return item.locale == browserLanguage
+                            }
+                        ).length > 0;
+
+                if (!hasLanguage) {
+                    browserLanguage = "en";
+                }
+                
                 languageSelect.html("");
 
                 for ( var i = 0; i < array.length; i ++) {
