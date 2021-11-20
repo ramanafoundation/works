@@ -25,21 +25,29 @@ $(function(){
             }
 
             function _renderLanguages(array) {
-                var languageSelect = $(".language-selection");
+                var languageSelect = $(".language-selection"),
+                    selectedLanguageIndex = -1,
+                    browserLanguage = navigator.language.split("-")[0];
                 languageSelect.html("");
 
                 for ( var i = 0; i < array.length; i ++) {
                     var current = array[i],
                         option = $("<option></option>").appendTo(languageSelect);
+                        
+                    if (browserLanguage.toLowerCase() == current.locale.toLowerCase()){
+                        option.attr("selected", "selected");
+                        selectedLanguageIndex = i;
+                    }
 
                     option.data("value", current);
                     option.text(current.name);
                 }
+
                 languageSelect.change((ev)=>{
                     var selected = languageSelect.find("option:selected").data("value");
                     _triggerOnLanguageChanged(selected);
                 });
-                _triggerOnLanguageChanged(array[0]);
+                _triggerOnLanguageChanged(array[selectedLanguageIndex]);
             }
 
             function _triggerOnLanguageChanged(language){
