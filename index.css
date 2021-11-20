@@ -38,7 +38,8 @@ select {
 }
 
 body{
-    background: url(images/arunachala.png) no-repeat center center fixed;
+    background: url(images/arunachala.png) no-repeat center top;
+    background-color:black
 }
 
 .card {
