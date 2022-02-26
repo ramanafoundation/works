@@ -1,7 +1,7 @@
 $(function(){
     jQuery.fn.toolbar = function(){
         var that = $(this);
-        that.each(function(){
+        that.each(async function(){
             function _renderWorks(array) {
                 that.html("");
                 for ( var i = 0; i < array.length; i ++) {
@@ -64,10 +64,9 @@ $(function(){
                 $("body").trigger("languageChanged", language);
             }
 
-            window.workService.getWorks().then((data) => {
-                _renderLanguages(data.locales);
-                _renderWorks(data.works);
-            });
+            var allWorks = await window.workService.getAllWorksInfo();
+            _renderLanguages(allWorks.locales);
+            _renderWorks(allWorks.works);
         });
     };
 });

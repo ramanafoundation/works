@@ -1,11 +1,12 @@
 (function(){
     function DictionaryService(){
-        var _paragraphDictionary = null;
+        var _paragraphDictionary = null,
+            _workDictionary = null;
 
         this.getEntry = function(word){ 
             var cleanWord = _cleanWord(word),
                 entry = null,
-                dictionary = $.extend({}, window.currentLocale.dictionary, _paragraphDictionary);
+                dictionary = $.extend({}, _workDictionary, _paragraphDictionary);
             
             entry = dictionary[cleanWord];
             if (entry != null)
@@ -17,8 +18,9 @@
             return this.getEntry(word) != null;
         };
 
-        this.useParagraphDictionary = function(dictionary){
-            _paragraphDictionary = dictionary;
+        this.useParagraphDictionary = function(work, paragraph){
+            _workDictionary = work.translation.dictionary;
+            _paragraphDictionary = paragraph.dictionary;
         };
 
         this.translate = function (word) {

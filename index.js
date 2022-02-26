@@ -1,37 +1,15 @@
-$(function(){
+$(async function(){
     var toolbar = $(".main-toolbar"),
         main = $("main");
-
-    function _toggleHideDefinitions() {
-        var explanationsAvailable = $(".has-explanation").length > 0;
-
-        if (!explanationsAvailable) {
-            $(".form-check").hide();
-        } else {
-            $(".form-check").show();
-        }
-    }
 
     function _showCarousel() {
         $(".carousel").carousel();
     }
 
-    function _displayWork() {
-        if (window.currentWork == null)
-            return;
-        if (window.currentLocale == null)
-            return;
-
-        window.workService
-            .getDictionary(
-                window.currentWork.folder, 
-                window.currentLocale.locale)
-            .then((data)=>{
-                window.currentLocale.dictionary = data;
-                main.header();
-                _setupShowTamilButton();
-            });
-        
+    async function _displayWork() {
+        var currentWork = await window.workService.getCurrentWork();
+        main.header();
+        _setupShowTamilButton();
         _displayParagraph();
     }
 
@@ -41,43 +19,33 @@ $(function(){
         });
     }
 
-    function _displayParagraph() {
-        var work = window.currentWork,
-            selectedParagraph = window.currentWork.selectedParagraph;
+    function _displayVideos(translatedParagraph) {
+        $(".video-section .videos").videoPlayer({
+            translatedParagraph : translatedParagraph
+        });
+    }
 
-        if (selectedParagraph == null)
-            selectedParagraph = window.currentWork.tamil.paragraphs[0];
+    async function _displayParagraph() {
+        var work = await window.workService.getCurrentWork(),
+            selectedParagraph = work.selectedParagraph;
+        
+        _displayTamilParagraph(selectedParagraph.type, selectedParagraph.number);
+        _showCarousel();
+        _displayParaphrase(selectedParagraph);
+        _displayVideos(selectedParagraph);
 
-        window.workService
-            .getTranslationForParagraph(
-                work.folder, 
-                selectedParagraph.type, 
-                selectedParagraph.number)
-            .then((translatedParagraph)=>{
-                _displayTamilParagraph(selectedParagraph.type, selectedParagraph.number);
-                _showCarousel();
-                _displayParaphrase(translatedParagraph);
-
-                $(".paragraph").paragrapher({
-                    title : translatedParagraph.title,
-                    text : translatedParagraph.text,
-                    dictionary : translatedParagraph.dictionary
-                });
-
-                _toggleHideDefinitions();
-            });
-
+        $(".paragraph").paragrapher({
+            title : selectedParagraph.title,
+            text : selectedParagraph.text,
+            dictionary : selectedParagraph.dictionary
+        });
+        
         $(".explanation").hide();
     }
 
-    function _displayTamilParagraph(type, number) {
-        var tamilParagraph = window.currentWork.tamil.paragraphs.filter(
-            n => n.type == type && n.number == number
-        );
-        if (tamilParagraph.length == 0)
-            return;
-
-        var text = tamilParagraph[0].text;
+    async function _displayTamilParagraph(type, number) {
+        var work = await window.workService.getCurrentWork(),
+            text = work.selectedParagraph.tamil.text;
 
         if (text["padacchēdam"] == null)
             $(".paragraph-tamil-p").hide();
@@ -124,12 +92,18 @@ $(function(){
         }
     }
 
-    function _bindEvents(){
-        main.on("paragraphSelected", (ev, data) => {
-            window.currentWork.selectedParagraph = data;
+    async function _bindEvents(){
+        _displayWork();
+
+        $("body").on("paragraphSelected", async function(){
             _displayParagraph();
         });
 
+        /*
+        main.on("paragraphSelected", (ev, data) => {
+            _displayParagraph();
+        });
+        
         toolbar.on("workSelected", (ev, data) => {
             window.currentWork = data;
             window.workService
@@ -143,7 +117,7 @@ $(function(){
         $("body").on("languageChanged", (ev, data) => {
             window.currentLocale = data;
             _displayWork();
-        });    
+        });    */
     }
 
     function _initialize(){
