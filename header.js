@@ -1,36 +1,35 @@
 $(function(){
-    jQuery.fn.header = function(options){
+    jQuery.fn.header = async function(options){
         var that = $(this),
-            work = window.currentWork,
-            selectedParagraph = window.currentWork.selectedParagraph;
+            work = await window.workService.getCurrentWork(),
+            selectedParagraph = work.selectedParagraph;
 
         that.each(function(){
-            var array = work.tamil.paragraphs,
+            var array = work.translation.paragraphs,
                 select = that.find("select"),
                 title = that.find(".work-title"),
                 translatedTitle = that.find(".work-translated-title");
             select.html("");
 
-            title.text(work.name);
-            translatedTitle.text(window.dictionaryService.getTranslatedTitle());
+            title.text(work.info.name);
+            translatedTitle.text(work.translation.dictionary.title);
 
             for ( var i = 0; i < array.length; i ++) {
                 var current = array[i],
-                    option = $("<option></option>").appendTo(select),
-                    typeText = window.dictionaryService.translate(current.type);
-                option.text(typeText + " - " + current.number);
+                    option = $("<option></option>").appendTo(select);
+
+                option.text(current.title);
                 option.data("value", current);
 
                 if (selectedParagraph != null && 
-                    current.number == selectedParagraph.number &&
-                    current.type == selectedParagraph.type) {
+                    current.title == selectedParagraph.title) {
                     option.attr("selected", "selected");     
                 }
             }
 
             select.change(() => {
                 var selected = select.find("option:selected").data("value");
-                that.trigger("paragraphSelected", selected);
+                window.workService.setSelectedParagraph(selected);
             });
         });
     };
